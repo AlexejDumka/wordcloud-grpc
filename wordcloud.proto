@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+service WordCloudService {
+  rpc GenerateWordCloud (WordCloudRequest) returns (WordCloudResponse);
+}
+
+message WordCloudRequest {
+  string text = 1;
+}
+
+message WordCloudResponse {
+  bytes image = 1;
+}
